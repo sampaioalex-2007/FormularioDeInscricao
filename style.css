@@ -146,22 +146,27 @@ fieldset select {
 }
 
 .custom-upload-area.uploaded {
-    border-color: #4CAF50; 
-    background-color: #f0fff4;
+    border-color: rgba(246, 120, 65, 1); 
+    background-color:rgba(254, 231, 214, 1);
 }
 
 .file-name {
     display: none;
     margin-top: 8px;
-    color: #4CAF50;
+    color: rgba(87, 83, 78, 1);
     font-size: 14px;
 }
 
 .uploaded .file-name {
     display: block; 
-    color: #4CAF50;
+    color:  rgba(87, 83, 78, 1);
     margin-top: 8px;
 }
+
+.uploaded .upload-text {
+    color: rgba(254, 231, 214, 1);
+}
+
 
 .trilhas h2{
     font-size: 16px;
