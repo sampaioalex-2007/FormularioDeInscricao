@@ -145,6 +145,24 @@ fieldset select {
     height: 0;
 }
 
+.custom-upload-area.uploaded {
+    border-color: #4CAF50; 
+    background-color: #f0fff4;
+}
+
+.file-name {
+    display: none;
+    margin-top: 8px;
+    color: #4CAF50;
+    font-size: 14px;
+}
+
+.uploaded .file-name {
+    display: block; 
+    color: #4CAF50;
+    margin-top: 8px;
+}
+
 .trilhas h2{
     font-size: 16px;
     font-weight: 600;
