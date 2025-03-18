@@ -1,0 +1,7 @@
+{
+    "name": "desafio-2-inova",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "echo 'Build estático concluído!' && exit 0"
+    }
+  }
