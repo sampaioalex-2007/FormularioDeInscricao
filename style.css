@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: rgba(33, 53, 166, 1);
+    display: flex;
+    margin: 0;
+    min-height: 100vh; 
+    box-sizing: border-box;
+}
+
+.global-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 60px;
+    overflow-y: auto;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside {
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside__imagem-de-fundo {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s;
+    max-width: 50%;
+}
+
+.aside__logo {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80%;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset legend {
+    padding: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+fieldset label {
+    color: rgba(87, 83, 78, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+fieldset input {
+    height: 40px;
+    padding: 3px 4px;
+    border-width: 1px;
+    border-color: rgba(214, 211, 209, 1);
+    border-radius: 8px;
+    border-style: solid;
+    gap: 2px;
+}
+
+fieldset select {
+    height: 40px;
+    padding: 3px 4px;
+    border-width: 1px;
+    border-color: rgba(214, 211, 209, 1);
+    border-radius: 8px;
+    border-style: solid;
+    gap: 2px;
+}
+
+.cabecalho h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.cabecalho p {
+    color: rgba(87, 83, 78, 1);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.voltar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(87, 83, 78, 1);
+}
+
+.custom-upload-area {
+    border: 2px dashed rgba(214, 211, 209, 1);
+    border-radius: 8px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.trilhas h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+.endereco__doisInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.endereco__doisInputs__primeiro {
+    width: 70%;
+}
+.endereco__doisInputs__segundo {
+    width: 25%;
+}
+
+.formulario__trilhas__radioButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.formulario__trilhas__radioButtons__rbt {
+    width: 220px;
+    height: 120px;
+    border-width: 1px;
+    border-color: rgba(214, 211, 209, 1);
+    border-radius: 8px;
+    border-style: solid;
+}
+
+.formulario__trilhas__radioButtons__rbt div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    gap: 5px;
+}
+.formulario__trilhas__radioButtons__rbt input {
+    width: 20px;
+    height: 20px;
+}
+
+.formulario__termos {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.formulario__termos input {
+    width: 40px;
+    height: 20px;
+}
+.formulario__termos label {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(87, 83, 78, 1);
+}
+.formulario__termos a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(228, 58, 18, 1);
+}
+
+.formulario__confirmacao {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.formulario__confirmacao button{
+    min-width: 120px;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-align: center;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.formulario__confirmacao__cancelar{
+    border: 1px solid rgba(228, 58, 18, 1);
+    background-color: white;
+    color: rgba(228, 58, 18, 1);
+}
+.formulario__confirmacao__confirmar{
+    border: 1px solid rgba(228, 58, 18, 1);
+    background-color: rgba(228, 58, 18, 1);
+    color: white;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    main,
+    aside {
+        width: 100%;
+        position: relative; /* Volta ao fluxo normal */
+    }
+
+    aside {
+        height: 300px; /* Altura fixa para mobile */
+    }
+
+    .aside__imagem-de-fundo {
+        width: 50%;
+        position: relative; /* Ajusta posicionamento */
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+
+    .aside__logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 20px 0;
+    }
+}
+
+/* Responsividade para telas maiores do que 720p (que foi usado no design) */
+@media (min-width: 1281px) {
+    .global-container {
+        transform: scale(1.2); 
+        transform-origin: 0 0; 
+        width: 83.33%; 
+        min-height: 83.33vh; 
+    }
+
+    main {
+        padding: 60px 5%; 
+    }
+}
