@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Meta tags para configuração básica do documento -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Inova - Formulário de Inscrição</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Botão de toggle para modo escuro -->
     <button id="darkModeToggle" class="dark-mode-toggle">
         <img src="public/img/sun.png" alt="Modo claro" id="darkModeIcon" class="dark-mode-icon">
     </button>
     
-    <!-- Container principal -->
     <div class="global-container">
         <main class="inscricao">
-            <!-- Link para voltar -->
             <div>
                 <a href="" class="voltar">
                     <img src="public/icon/arrow-left-02.png" alt="Seta à esquerda"/>
@@ -24,20 +20,16 @@
                 </a>
             </div>
             
-            <!-- Cabeçalho com título e descrição -->
             <section class="cabecalho">
                 <h1>Formulário de inscrição</h1>
                 <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
             </section>
             
-            <!-- Formulário principal -->
             <form action="" class="formulario" onsubmit="return false;">
-                <!-- Seção de informações pessoais -->
                 <fieldset class="informacoes">
                     <div>
                         <legend>Informações do participante</legend>
                     </div>
-                    <!-- Campos de informações pessoais -->
                     <div>
                         <label for="nome">Nome Completo</label>
                         <input type="text" id="nome" required autocomplete="name"/>
@@ -68,7 +60,6 @@
                         <input type="text" id="telefone" required autocomplete="tel"/>
                     </div>
                     
-                    <!-- Upload de documento de identidade -->
                     <div class="custom-file-upload" id="uploadContainer">
                         <label for="docIdentidade">Documento de identidade</label>
                         <input type="file" id="docIdentidade" class="input-hidden" required/>
@@ -77,15 +68,14 @@
                             <span class="upload-text">Clique aqui para selecionar o arquivo</span>
                             <span class="file-name"></span>
                         </label>
+                        
                     </div>
                 </fieldset>
                 
-                <!-- Seção de endereço -->
                 <fieldset class="endereco">
                     <div>
                         <legend>Endereço residencial</legend>
                     </div>
-                    <!-- Campos de endereço -->
                     <div>
                         <label for="cep">CEP</label>
                         <input type="text" id="cep" required autocomplete="postal-code"/>
@@ -111,7 +101,6 @@
                         </div>
                     </div>
                     
-                    <!-- Upload de comprovante de residência -->
                     <div class="custom-file-upload" id="uploadContainer">
                         <label for="compResidencia">Comprovante de residência</label>
                         <input type="file" id="compResidencia" class="input-hidden" required/>
@@ -120,10 +109,10 @@
                             <span class="upload-text">Clique aqui para selecionar o arquivo</span>
                             <span class="file-name"></span>
                         </label>
+                        
                     </div>
                 </fieldset>
                 
-                <!-- Campos de login -->
                 <div class="login-fields">
                     <label for="userId">ID do Usuário</label>
                     <input type="text" id="userId" required autocomplete="username"/>
@@ -135,12 +124,10 @@
                     <input type="password" id="confirmPassword" required autocomplete="new-password"/>
                 </div>
                 
-                <!-- Seção de seleção de trilhas -->
                 <section class="trilhas">
                     <h2>Trilhas de aprendizagem</h2>
                     <p>Selecione apenas uma trilha</p>
                     <div class="formulario__trilhas__radioButtons">
-                        <!-- Opções de trilhas como radio buttons -->
                         <label for="front" class="formulario__trilhas__radioButtons__rbt">
                             <input type="radio" id="front" value="front" name="trilhas" required/>
                             <div>
@@ -179,7 +166,6 @@
                     </div>
                 </section>
                 
-                <!-- Termos e condições -->
                 <div class="formulario__termos">
                     <input type="checkbox" name="termos" id="termos" required/>
                     <label for="termos">
@@ -189,7 +175,6 @@
                     </label>
                 </div>
                 
-                <!-- Botões de ação -->
                 <div class="formulario__confirmacao">
                     <button class="formulario__confirmacao__cancelar">Cancelar</button>
                     <button type="button" class="formulario__confirmacao__salvar">Salvar</button>
@@ -199,13 +184,11 @@
         </main>
     </div>
     
-    <!-- Aside com imagem ilustrativa e logo -->
     <aside>
         <img src="/public/img/Ilustration.png" alt="Programador com computador" class="aside__imagem-de-fundo"/>
         <img src="/public/img/logo-trilhas-inova.png" alt="Logo do Programa Trilhas Inova" class="aside__logo"/>
     </aside>
     
-    <!-- Script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
