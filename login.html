@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inova - Login</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags para configuração básica do documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para responsividade -->
+    <title>Inova - Login</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS de estilos -->
 </head>
 <body>
+    <!-- Container principal do login -->
     <div class="login-container">
         <div class="login-wrapper">
-            <!-- Seção do Formulário -->
+            <!-- Seção do formulário de login -->
             <div class="login-form-section">
                 <div class="login-content">
+                    <!-- Logo da aplicação -->
                     <img src="public/img/logo-trilhas-inova.png" alt="Logo Trilhas Inova" class="login-logo">
                     
+                    <!-- Mensagem de boas-vindas -->
                     <div class="login-welcome">
                         <h1>Bem-vindo(a)</h1>
                         <p>Estamos felizes em te ver de volta</p>
                     </div>
                     
+                    <!-- Formulário de login -->
                     <form id="loginForm" class="login-form">
+                        <!-- Campo para ID do usuário -->
                         <div class="form-group">
                             <label for="loginUserId">ID do Usuário</label>
                             <input type="text" id="loginUserId" required autocomplete="username">
                         </div>
                         
+                        <!-- Campo para senha -->
                         <div class="form-group">
                             <label for="loginPassword">Senha</label>
                             <input type="password" id="loginPassword" required autocomplete="current-password">
                         </div>
                         
+                        <!-- Botão de submit -->
                         <button type="submit" class="login-button">Entrar</button>
                     </form>
                     
+                    <!-- Link para cadastro -->
                     <p class="register-link">Não tem uma conta? <a href="index.html">Cadastre-se</a></p>
                 </div>
             </div>
             
-            <!-- Seção da Imagem -->
+            <!-- Seção da imagem ilustrativa -->
             <div class="login-image-section">
                 <img src="public/img/Ilustration.png" alt="Ilustração" class="login-illustration">
             </div>
         </div>
     </div>
     
+    <!-- Script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

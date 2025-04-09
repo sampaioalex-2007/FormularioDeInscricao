@@ -1,267 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Inova - Formulário de Inscrição</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        
-        <button id="darkModeToggle" class="dark-mode-toggle">
-            <img src="public/img/sun.png" alt="Modo claro" id="darkModeIcon" class="dark-mode-icon">
-        </button>
-        
-        <div class="global-container">
-            <main class="inscricao">
-                <div>
-                    <a href="" class="voltar">
-                        <img
-                            src="public/icon/arrow-left-02.png"
-                            alt="Seta à esquerda"
-                        />
-                        <p>Voltar</p>
-                    </a>
-                </div>
-                <section class="cabecalho">
-                    <h1>Formulário de inscrição</h1>
-                    <p>
-                        Preencha os dados abaixo para fazer sua inscrição no
-                        Programa Trilhas.
-                    </p>
-                </section>
-                <form action="" class="formulario" onsubmit="return false;">
-                    <fieldset class="informacoes">
-                        <div>
-                            <legend>Informações do participante</legend>
-                        </div>
-                        <div>
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" required autocomplete="name" />
-                        </div>
-                        <div>
-                            <label for="dataNascimento">Data de nascimento</label>
-                            <input type="text" id="dataNascimento" required autocomplete="bday" />
-                        </div>
-                        <div>
-                            <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" required autocomplete="off" />
-                        </div>
-                        <div>
-                            <label for="sexo">Sexo</label>
-                            <select id="sexo" required>
-                                <option value="" disabled selected>Selecione</option>
-                                <option value="Feminino">Feminino</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input type="text" id="email" required autocomplete="email" />
-                        </div>
-                        <div>
-                            <label for="telefone">Telefone</label>
-                            <input type="text" id="telefone" required autocomplete="tel" />
-                        </div>
-                        <div class="custom-file-upload" id="uploadContainer">
-                            <label for="docIdentidade">Documento de identidade</label>
-                            <input type="file" id="docIdentidade" class="input-hidden" required />
-                            <label for="docIdentidade" class="custom-upload-area">
-                                <img
-                                    src="public/icon/cloud-upload.png"
-                                    alt="Ícone de upload"
-                                    class="upload-icon"
-                                />
-                                <span class="upload-text"
-                                    >Clique aqui para selecionar o arquivo</span
-                                >
-                                <span class="file-name"></span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    <fieldset class="endereco">
-                        <div>
-                            <legend>Endereço residencial</legend>
-                        </div>
-                        <div>
-                            <label for="cep">CEP</label>
-                            <input type="text" id="cep" required autocomplete="postal-code" />
-                        </div>
-                        <div class="endereco__doisInputs">
-                            <div class="endereco__doisInputs__primeiro">
-                                <label for="rua">Rua</label>
-                                <input type="text" id="rua" required autocomplete="address-line1" />
-                            </div>
-                            <div class="endereco__doisInputs__segundo">
-                                <label for="numero">Número</label>
-                                <input type="text" id="numero" required />
-                            </div>
-                        </div>
-                        <div class="endereco__doisInputs">
-                            <div class="endereco__doisInputs__primeiro">
-                                <label for="cidade">Cidade</label>
-                                <input type="text" id="cidade" required autocomplete="address-level2" value="cidade" />
-                            </div>
-                            <div class="endereco__doisInputs__segundo">
-                                <label for="estado">Estado</label>
-                                <input type="text" id="estado" required autocomplete="address-level1" value="estado" />
-                            </div>
-                        </div>
-                        <div class="custom-file-upload" id="uploadContainer">
-                            <label for="compResidencia">Comprovante de residência</label>
-                            <input type="file" id="compResidencia" class="input-hidden" required />
-                            <label for="compResidencia" class="custom-upload-area">
-                                <img
-                                    src="public/icon/cloud-upload.png"
-                                    alt="Ícone de upload"
-                                    class="upload-icon"
-                                />
-                                <span class="upload-text"  
-                                    >Clique aqui para selecionar o arquivo</span
-                                >
-                                <span class="file-name"></span>
-                            </label>
-                        </div>
-                    </fieldset>
-                    
-                    <div class="login-fields">
-                        <label for="userId">ID do Usuário</label>
-                        <input type="text" id="userId" required autocomplete="username" />
-                        
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" required autocomplete="new-password" />
-                        
-                        <label for="confirmPassword">Confirmar Senha</label>
-                        <input type="password" id="confirmPassword" required autocomplete="new-password" />
+<head>
+    <!-- Meta tags para configuração básica do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova - Formulário de Inscrição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botão de toggle para modo escuro -->
+    <button id="darkModeToggle" class="dark-mode-toggle">
+        <img src="public/img/sun.png" alt="Modo claro" id="darkModeIcon" class="dark-mode-icon">
+    </button>
+    
+    <!-- Container principal -->
+    <div class="global-container">
+        <main class="inscricao">
+            <!-- Link para voltar -->
+            <div>
+                <a href="" class="voltar">
+                    <img src="public/icon/arrow-left-02.png" alt="Seta à esquerda"/>
+                    <p>Voltar</p>
+                </a>
+            </div>
+            
+            <!-- Cabeçalho com título e descrição -->
+            <section class="cabecalho">
+                <h1>Formulário de inscrição</h1>
+                <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+            </section>
+            
+            <!-- Formulário principal -->
+            <form action="" class="formulario" onsubmit="return false;">
+                <!-- Seção de informações pessoais -->
+                <fieldset class="informacoes">
+                    <div>
+                        <legend>Informações do participante</legend>
+                    </div>
+                    <!-- Campos de informações pessoais -->
+                    <div>
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required autocomplete="name"/>
+                    </div>
+                    <div>
+                        <label for="dataNascimento">Data de nascimento</label>
+                        <input type="text" id="dataNascimento" required autocomplete="bday"/>
+                    </div>
+                    <div>
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" required autocomplete="off"/>
+                    </div>
+                    <div>
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" required autocomplete="email"/>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" required autocomplete="tel"/>
                     </div>
                     
-                    <section class="trilhas">
-                        <h2>Trilhas de aprendizagem</h2>
-                        <p>Selecione apenas uma trilha</p>
-                        <div class="formulario__trilhas__radioButtons">
-                            <label
-                                for="front"
-                                class="formulario__trilhas__radioButtons__rbt"
-                            >
-                                <input
-                                    type="radio"
-                                    id="front"
-                                    value="front"
-                                    name="trilhas"
-                                    required
-                                />
-                                <div>
-                                    <img
-                                        src="/public/icon/icon-front.png"
-                                        alt="Ícone página web"
-                                    />
-                                    Programação Front-end
-                                </div>
-                            </label>
-                            <label
-                                for="back"
-                                class="formulario__trilhas__radioButtons__rbt"
-                            >
-                                <input
-                                    type="radio"
-                                    id="back"
-                                    value="back"
-                                    name="trilhas"
-                                />
-                                <div>
-                                    <img
-                                        src="/public/icon/icon-back.png"
-                                        alt="Ícone página web backend"
-                                    />
-                                    Programação Back-end
-                                </div>
-                            </label>
-                            <label
-                                for="jogos"
-                                class="formulario__trilhas__radioButtons__rbt"
-                            >
-                                <input
-                                    type="radio"
-                                    id="jogos"
-                                    value="jogos"
-                                    name="trilhas"
-                                />
-                                <div>
-                                    <img
-                                        src="/public/icon/icon-jogos.png"
-                                        alt="Ícone controle de videogame"
-                                    />
-                                    Programação de Jogos
-                                </div>
-                            </label>
-                            <label
-                                for="ux"
-                                class="formulario__trilhas__radioButtons__rbt"
-                            >
-                                <input
-                                    type="radio"
-                                    id="ux"
-                                    value="ux"
-                                    name="trilhas"
-                                />
-                                <div>
-                                    <img
-                                        src="/public/icon/icon-ux.png"
-                                        alt="Ícone UX"
-                                    />
-                                    Design e Experiência
-                                </div>
-                            </label>
-                            <label
-                                for="dados"
-                                class="formulario__trilhas__radioButtons__rbt"
-                            >
-                                <input
-                                    type="radio"
-                                    id="dados"
-                                    value="dados"
-                                    name="trilhas"
-                                />
-                                <div>
-                                    <img
-                                        src="/public/icon/icon-dados.png"
-                                        alt="Ícone gráfico"
-                                    />
-                                    Ciência de Dados
-                                </div>
-                            </label>
-                        </div>
-                    </section>
-                    <div class="formulario__termos">
-                        <input type="checkbox" name="termos" id="termos" required />
-                        <label for="termos"
-                            >Declaro que li e concordo com os
-                            <a href=""><strong>Termos e Condições</strong></a> e com
-                            a <a href=""><strong>Política de Privacidade</strong></a
-                            >.
+                    <!-- Upload de documento de identidade -->
+                    <div class="custom-file-upload" id="uploadContainer">
+                        <label for="docIdentidade">Documento de identidade</label>
+                        <input type="file" id="docIdentidade" class="input-hidden" required/>
+                        <label for="docIdentidade" class="custom-upload-area">
+                            <img src="public/icon/cloud-upload.png" alt="Ícone de upload" class="upload-icon"/>
+                            <span class="upload-text">Clique aqui para selecionar o arquivo</span>
+                            <span class="file-name"></span>
                         </label>
                     </div>
-                    <div class="formulario__confirmacao">
-                        <button class="formulario__confirmacao__cancelar">Cancelar</button>
-                        <button type="button" class="formulario__confirmacao__salvar">Salvar</button>
-                        <button type="submit" class="formulario__confirmacao__confirmar">Fazer inscrição</button>
+                </fieldset>
+                
+                <!-- Seção de endereço -->
+                <fieldset class="endereco">
+                    <div>
+                        <legend>Endereço residencial</legend>
                     </div>
-                </form>
-            </main>
-        </div>
-            <aside>
-                <img
-                    src="/public/img/Ilustration.png"
-                    alt="Programador com computador"
-                    class="aside__imagem-de-fundo"
-                />
-                <img
-                    src="/public/img/logo-trilhas-inova.png"
-                    alt="Logo do Programa Trilhas Inova"
-                    class="aside__logo"
-                />
-            </aside>
-            <script src="script.js"></script>
-    </body>
+                    <!-- Campos de endereço -->
+                    <div>
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" required autocomplete="postal-code"/>
+                    </div>
+                    <div class="endereco__doisInputs">
+                        <div class="endereco__doisInputs__primeiro">
+                            <label for="rua">Rua</label>
+                            <input type="text" id="rua" required autocomplete="address-line1"/>
+                        </div>
+                        <div class="endereco__doisInputs__segundo">
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" required/>
+                        </div>
+                    </div>
+                    <div class="endereco__doisInputs">
+                        <div class="endereco__doisInputs__primeiro">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" required autocomplete="address-level2" value="cidade"/>
+                        </div>
+                        <div class="endereco__doisInputs__segundo">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" required autocomplete="address-level1" value="estado"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Upload de comprovante de residência -->
+                    <div class="custom-file-upload" id="uploadContainer">
+                        <label for="compResidencia">Comprovante de residência</label>
+                        <input type="file" id="compResidencia" class="input-hidden" required/>
+                        <label for="compResidencia" class="custom-upload-area">
+                            <img src="public/icon/cloud-upload.png" alt="Ícone de upload" class="upload-icon"/>
+                            <span class="upload-text">Clique aqui para selecionar o arquivo</span>
+                            <span class="file-name"></span>
+                        </label>
+                    </div>
+                </fieldset>
+                
+                <!-- Campos de login -->
+                <div class="login-fields">
+                    <label for="userId">ID do Usuário</label>
+                    <input type="text" id="userId" required autocomplete="username"/>
+                    
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required autocomplete="new-password"/>
+                    
+                    <label for="confirmPassword">Confirmar Senha</label>
+                    <input type="password" id="confirmPassword" required autocomplete="new-password"/>
+                </div>
+                
+                <!-- Seção de seleção de trilhas -->
+                <section class="trilhas">
+                    <h2>Trilhas de aprendizagem</h2>
+                    <p>Selecione apenas uma trilha</p>
+                    <div class="formulario__trilhas__radioButtons">
+                        <!-- Opções de trilhas como radio buttons -->
+                        <label for="front" class="formulario__trilhas__radioButtons__rbt">
+                            <input type="radio" id="front" value="front" name="trilhas" required/>
+                            <div>
+                                <img src="/public/icon/icon-front.png" alt="Ícone página web"/>
+                                Programação Front-end
+                            </div>
+                        </label>
+                        <label for="back" class="formulario__trilhas__radioButtons__rbt">
+                            <input type="radio" id="back" value="back" name="trilhas"/>
+                            <div>
+                                <img src="/public/icon/icon-back.png" alt="Ícone página web backend"/>
+                                Programação Back-end
+                            </div>
+                        </label>
+                        <label for="jogos" class="formulario__trilhas__radioButtons__rbt">
+                            <input type="radio" id="jogos" value="jogos" name="trilhas"/>
+                            <div>
+                                <img src="/public/icon/icon-jogos.png" alt="Ícone controle de videogame"/>
+                                Programação de Jogos
+                            </div>
+                        </label>
+                        <label for="ux" class="formulario__trilhas__radioButtons__rbt">
+                            <input type="radio" id="ux" value="ux" name="trilhas"/>
+                            <div>
+                                <img src="/public/icon/icon-ux.png" alt="Ícone UX"/>
+                                Design e Experiência
+                            </div>
+                        </label>
+                        <label for="dados" class="formulario__trilhas__radioButtons__rbt">
+                            <input type="radio" id="dados" value="dados" name="trilhas"/>
+                            <div>
+                                <img src="/public/icon/icon-dados.png" alt="Ícone gráfico"/>
+                                Ciência de Dados
+                            </div>
+                        </label>
+                    </div>
+                </section>
+                
+                <!-- Termos e condições -->
+                <div class="formulario__termos">
+                    <input type="checkbox" name="termos" id="termos" required/>
+                    <label for="termos">
+                        Declaro que li e concordo com os
+                        <a href=""><strong>Termos e Condições</strong></a> e com
+                        a <a href=""><strong>Política de Privacidade</strong></a>.
+                    </label>
+                </div>
+                
+                <!-- Botões de ação -->
+                <div class="formulario__confirmacao">
+                    <button class="formulario__confirmacao__cancelar">Cancelar</button>
+                    <button type="button" class="formulario__confirmacao__salvar">Salvar</button>
+                    <button type="submit" class="formulario__confirmacao__confirmar">Fazer inscrição</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    
+    <!-- Aside com imagem ilustrativa e logo -->
+    <aside>
+        <img src="/public/img/Ilustration.png" alt="Programador com computador" class="aside__imagem-de-fundo"/>
+        <img src="/public/img/logo-trilhas-inova.png" alt="Logo do Programa Trilhas Inova" class="aside__logo"/>
+    </aside>
+    
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
 </html>

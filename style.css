@@ -1,39 +1,45 @@
+/* Importação da fonte do Google Fonts - Montserrat e Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600&display=swap');
 
+/* Estilos gerais do corpo da página */
 body {
-    font-family: "Poppins", sans-serif;
-    background: rgba(33, 53, 166, 1);
-    display: flex;
-    margin: 0;
-    min-height: 100vh; 
-    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Define a fonte padrão */
+    background: rgba(33, 53, 166, 1); /* Cor de fundo azul */
+    display: flex; /* Layout flexível */
+    margin: 0; /* Remove margens padrão */
+    min-height: 100vh; /* Altura mínima da viewport */
+    box-sizing: border-box; /* Modelo de caixa inclui padding e border */
 }
 
+/* Container global que envolve todo o conteúdo */
 .global-container {
     width: 100%;
     height: 100%;
 }
 
+/* Estilos para o conteúdo principal */
 main {
     display: flex;
-    flex-direction: column;
-    background: white;
+    flex-direction: column; /* Organiza os itens em coluna */
+    background: white; /* Fundo branco */
     box-sizing: border-box;
-    width: 50%;
-    padding: 60px;
-    overflow-y: auto;
+    width: 50%; /* Ocupa metade da largura */
+    padding: 60px; /* Espaçamento interno */
+    overflow-y: auto; /* Habilita scroll vertical se necessário */
 }
 
+/* Estilos para o formulário */
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre elementos */
 }
 
+/* Estilos para a barra lateral */
 aside {
-    width: 50%;
-    position: fixed;
-    right: 0;
+    width: 50%; /* Ocupa metade da largura */
+    position: fixed; /* Fixa na tela */
+    right: 0; /* Alinha à direita */
     top: 0;
     bottom: 0;
     display: flex;
@@ -42,64 +48,72 @@ aside {
     justify-content: center;
 }
 
+/* Estilos para a imagem de fundo na sidebar */
 .aside__imagem-de-fundo {
-    width: 70%;
-    height: auto;
+    width: 70%; /* Largura relativa */
+    height: auto; /* Altura automática */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s;
-    max-width: 50%;
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    transition: width 0.3s; /* Transição suave */
+    max-width: 50%; /* Largura máxima */
 }
 
+/* Estilos para o logo na sidebar */
 .aside__logo {
-    width: 30%;
+    width: 30%; /* Largura relativa */
     height: auto;
     position: absolute;
-    top: 15%;
+    top: 15%; /* Posicionamento vertical */
     left: 50%;
-    transform: translateX(-50%);
-    max-width: 80%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    max-width: 80%; /* Largura máxima */
 }
 
+/* Estilos para os fieldsets (grupos de campos) */
 fieldset {
-    border: none;
+    border: none; /* Remove borda padrão */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre elementos */
     margin: 0;
     padding: 0;
 }
 
+/* Estilos para a legenda do fieldset */
 fieldset legend {
     padding: 0;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 600; /* Texto em negrito */
 }
 
+/* Estilos para os containers dentro do fieldset */
 fieldset div {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 1px; /* Pequeno espaçamento */
 }
 
+/* Estilos para os labels */
 fieldset label {
-    color: rgba(87, 83, 78, 1);
+    color: rgba(87, 83, 78, 1); /* Cor cinza escuro */
     font-size: 14px;
     font-weight: 400;
 }
 
+/* Estilos para os inputs */
 fieldset input {
-    height: 40px;
-    padding: 3px 4px;
+    height: 40px; /* Altura fixa */
+    padding: 3px 4px; /* Espaçamento interno */
     border-width: 1px;
-    border-color: rgba(214, 211, 209, 1);
-    border-radius: 8px;
+    border-color: rgba(214, 211, 209, 1); /* Cor da borda */
+    border-radius: 8px; /* Bordas arredondadas */
     border-style: solid;
     gap: 2px;
 }
 
+/* Estilos para os selects */
 fieldset select {
     height: 40px;
     padding: 3px 4px;
@@ -110,6 +124,7 @@ fieldset select {
     gap: 2px;
 }
 
+/* Estilos para o cabeçalho */
 .cabecalho h1 {
     font-size: 24px;
     font-weight: 600;
@@ -121,6 +136,7 @@ fieldset select {
     font-weight: 400;
 }
 
+/* Estilos para o link de voltar */
 .voltar {
     display: flex;
     flex-direction: row;
@@ -131,27 +147,31 @@ fieldset select {
     color: rgba(87, 83, 78, 1);
 }
 
+/* Área de upload personalizada */
 .custom-upload-area {
-    border: 2px dashed rgba(214, 211, 209, 1);
+    border: 2px dashed rgba(214, 211, 209, 1); /* Borda tracejada */
     border-radius: 8px;
-    height: 128px;
+    height: 128px; /* Altura fixa */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Input escondido para upload */
 .input-hidden {
     visibility: hidden;
     width: 0;
     height: 0;
 }
 
+/* Estado quando arquivo é enviado */
 .custom-upload-area.uploaded {
-    border-color: rgba(246, 120, 65, 1); 
-    background-color:rgba(254, 231, 214, 1);
+    border-color: rgba(246, 120, 65, 1); /* Laranja */
+    background-color:rgba(254, 231, 214, 1); /* Fundo laranja claro */
 }
 
+/* Nome do arquivo (inicialmente escondido) */
 .file-name {
     display: none;
     margin-top: 8px;
@@ -159,21 +179,20 @@ fieldset select {
     font-size: 14px;
 }
 
+/* Mostra nome do arquivo quando enviado */
 .uploaded .file-name {
-    display: block; 
-    color:  rgba(87, 83, 78, 1);
+    display: block;
+    color: rgba(87, 83, 78, 1);
     margin-top: 8px;
 }
 
-.uploaded .upload-text {
-    color: rgba(254, 231, 214, 1);
-}
-
+/* Estilos para a seção de trilhas */
 .trilhas h2 {
     font-size: 16px;
     font-weight: 600;
 }
 
+/* Layout para dois inputs lado a lado */
 .endereco__doisInputs {
     display: flex;
     flex-direction: row;
@@ -181,32 +200,35 @@ fieldset select {
 }
 
 .endereco__doisInputs__primeiro {
-    width: 70%;
+    width: 70%; /* Primeiro input maior */
 }
 
 .endereco__doisInputs__segundo {
-    width: 25%;
+    width: 25%; /* Segundo input menor */
 }
 
+/* Estilos para os radio buttons de trilhas */
 .formulario__trilhas__radioButtons {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Quebra linha se necessário */
     gap: 10px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
 }
 
+/* Estilo individual para cada opção de trilha */
 .formulario__trilhas__radioButtons__rbt {
-    width: 220px;
-    height: 120px;
+    width: 220px; /* Largura fixa */
+    height: 120px; /* Altura fixa */
     border-width: 1px;
     border-color: rgba(214, 211, 209, 1);
     border-radius: 8px;
     border-style: solid;
 }
 
+/* Container interno dos radio buttons */
 .formulario__trilhas__radioButtons__rbt div {
     display: flex;
     flex-direction: column;
@@ -216,11 +238,13 @@ fieldset select {
     gap: 5px;
 }
 
+/* Estilo do input radio */
 .formulario__trilhas__radioButtons__rbt input {
     width: 20px;
     height: 20px;
 }
 
+/* Estilos para os termos e condições */
 .formulario__termos {
     display: flex;
     flex-direction: row;
@@ -243,28 +267,30 @@ fieldset select {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
-    color: rgba(228, 58, 18, 1);
+    color: rgba(228, 58, 18, 1); /* Vermelho */
 }
 
+/* Estilos para os botões de confirmação */
 .formulario__confirmacao {
     display: flex;
     flex-direction: row;
     gap: 5px;
     width: 100%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha à direita */
 }
 
 .formulario__confirmacao button {
-    min-width: 120px;
+    min-width: 120px; /* Largura mínima */
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 12px 24px; /* Espaçamento interno */
     text-align: center;
     align-self: center;
     font-weight: 500;
     font-size: 16px;
 }
 
+/* Estilos específicos para cada botão */
 .formulario__confirmacao__cancelar {
     border: 1px solid rgba(228, 58, 18, 1);
     background-color: white;
@@ -273,10 +299,9 @@ fieldset select {
 }
 
 .formulario__confirmacao__cancelar:hover {
-    background-color: rgba(228, 58, 18, 0.1);
-    transition: background-color 0.3s ease;
+    background-color: rgba(228, 58, 18, 0.1); /* Fundo semi-transparente */
+    transition: background-color 0.3s ease; /* Transição suave */
     color: rgba(228, 58, 18, 1);
-
 }
 
 .formulario__confirmacao__salvar {
@@ -291,8 +316,6 @@ fieldset select {
     transition: background-color 0.3s ease;
 }
 
-
-
 .formulario__confirmacao__confirmar {
     border: 1px solid rgba(228, 58, 18, 1);
     background-color: rgba(228, 58, 18, 1);
@@ -305,6 +328,7 @@ fieldset select {
     transition: background-color 0.3s ease;
 }
 
+/* Estilos para os campos de login */
 .login-fields {
     display: flex;
     flex-direction: column;
@@ -327,27 +351,27 @@ fieldset select {
     border-style: solid;
 }
 
+/* Mensagens de erro */
 .error-message {
     color: red;
     font-size: 12px;
     margin-top: 4px;
 }
 
-
-
+/* Estilos para o modo escuro */
 body.dark-mode fieldset label,
 body.dark-mode .cabecalho p,
 body.dark-mode .formulario__termos label,
 body.dark-mode .login-fields label {
-    color: #cccccc;
+    color: #cccccc; /* Texto mais claro no modo escuro */
 }
 
 body.dark-mode fieldset input,
 body.dark-mode fieldset select,
 body.dark-mode .login-fields input {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    border-color: #444;
+    background-color: #2d2d2d; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    border-color: #444; /* Borda mais escura */
 }
 
 body.dark-mode .formulario__trilhas__radioButtons__rbt {
@@ -365,7 +389,7 @@ body.dark-mode .uploaded .custom-upload-area {
     border-color: rgba(246, 120, 65, 1);
 }
 
-/* Modo Escuro - Botão e Ícone */
+/* Botão de toggle do modo escuro */
 .dark-mode-toggle {
     position: fixed;
     top: 20px;
@@ -373,10 +397,10 @@ body.dark-mode .uploaded .custom-upload-area {
     width: 44px;
     height: 44px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    border-radius: 50%; /* Forma circular */
     border: none;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
     padding: 10px;
     display: flex;
     align-items: center;
@@ -396,10 +420,9 @@ body.dark-mode .uploaded .custom-upload-area {
 
 body.dark-mode .dark-mode-toggle {
     background: white;
-    
 }
 
-/* Modo Escuro - Estilos Gerais */
+/* Estilos gerais para o modo escuro */
 body.dark-mode {
     background: #121212;
     color: #ffffff;
@@ -410,36 +433,7 @@ body.dark-mode main {
     color: #ffffff;
 }
 
-body.dark-mode fieldset label,
-body.dark-mode .cabecalho p,
-body.dark-mode .formulario__termos label,
-body.dark-mode .login-fields label {
-    color: #cccccc;
-}
-
-body.dark-mode fieldset input,
-body.dark-mode fieldset select,
-body.dark-mode .login-fields input {
-    background-color: #2d2d2d;
-    color: #ffffff;
-    border-color: #444;
-}
-
-body.dark-mode .formulario__trilhas__radioButtons__rbt {
-    background-color: #2d2d2d;
-    border-color: #444;
-}
-
-body.dark-mode .custom-upload-area {
-    background-color: #2d2d2d;
-    border-color: #444;
-}
-
-body.dark-mode .uploaded .custom-upload-area {
-    background-color: #3a2a1e;
-    border-color: rgba(246, 120, 65, 1);
-}
-
+/* Animação de flutuação para a ilustração */
 @keyframes flutuar {
     0%, 100% {
         transform: translate(-50%, -50%) translateY(0);
@@ -454,21 +448,21 @@ body.dark-mode .uploaded .custom-upload-area {
     animation: flutuar 3s ease-in-out infinite;
 }
 
-
-/* Responsividade para telas menores */
+/* Media queries para responsividade */
 @media (max-width: 768px) {
+    /* Layout para telas menores */
     body {
-        flex-direction: column;
+        flex-direction: column; /* Empilha elementos verticalmente */
     }
 
     main,
     aside {
-        width: 100%;
-        position: relative;
+        width: 100%; /* Ocupa toda a largura */
+        position: relative; /* Remove posicionamento fixo */
     }
 
     aside {
-        height: 300px;
+        height: 300px; /* Altura fixa para a sidebar */
     }
 
     .aside__imagem-de-fundo {
@@ -488,31 +482,30 @@ body.dark-mode .uploaded .custom-upload-area {
     }
     
     .formulario__confirmacao {
-        flex-direction: column;
+        flex-direction: column; /* Empilha botões */
         align-items: stretch;
     }
     
     .formulario__confirmacao button {
-        width: 100%;
+        width: 100%; /* Botões ocupam toda a largura */
     }
 }
 
-/* Responsividade para telas maiores do que 720p */
+/* Media query para telas maiores que 720p */
 @media (min-width: 1281px) {
     .global-container {
-        transform: scale(1.2); 
-        transform-origin: 0 0; 
-        width: 83.33%; 
-        min-height: 83.33vh; 
+        transform: scale(1.2); /* Aumenta o tamanho */
+        transform-origin: 0 0;
+        width: 83.33%;
+        min-height: 83.33vh;
     }
 
     main {
-        padding: 60px 5%; 
+        padding: 60px 5%; /* Ajusta o padding */
     }
 }
 
-
-/* Estilos para a página de login */
+/* Estilos específicos para a página de login */
 .login-container {
     width: 100%;
     min-height: 100vh;
@@ -652,15 +645,15 @@ body.dark-mode .uploaded .custom-upload-area {
     color: #D0340F;
 }
 
-/* Responsividade */
+/* Responsividade para a página de login */
 @media (max-width: 768px) {
     .login-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Empilha seções */
     }
     
     .login-form-section {
         padding: 40px 30px;
-        order: 2;
+        order: 2; /* Muda a ordem */
     }
     
     .login-image-section {
@@ -669,6 +662,6 @@ body.dark-mode .uploaded .custom-upload-area {
     }
     
     .login-illustration {
-        max-height: 200px;
+        max-height: 200px; /* Reduz tamanho da ilustração */
     }
 }
