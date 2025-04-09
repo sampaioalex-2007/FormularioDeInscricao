@@ -14,7 +14,6 @@ body {
     height: 100%;
 }
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -84,6 +83,7 @@ fieldset div {
     flex-direction: column;
     gap: 1px;
 }
+
 fieldset label {
     color: rgba(87, 83, 78, 1);
     font-size: 14px;
@@ -114,6 +114,7 @@ fieldset select {
     font-size: 24px;
     font-weight: 600;
 }
+
 .cabecalho p {
     color: rgba(87, 83, 78, 1);
     font-size: 16px;
@@ -139,6 +140,7 @@ fieldset select {
     justify-content: center;
     align-items: center;
 }
+
 .input-hidden {
     visibility: hidden;
     width: 0;
@@ -167,19 +169,21 @@ fieldset select {
     color: rgba(254, 231, 214, 1);
 }
 
-
-.trilhas h2{
+.trilhas h2 {
     font-size: 16px;
     font-weight: 600;
 }
+
 .endereco__doisInputs {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .endereco__doisInputs__primeiro {
     width: 70%;
 }
+
 .endereco__doisInputs__segundo {
     width: 25%;
 }
@@ -193,6 +197,7 @@ fieldset select {
     font-weight: 500;
     font-size: 16px;
 }
+
 .formulario__trilhas__radioButtons__rbt {
     width: 220px;
     height: 120px;
@@ -210,6 +215,7 @@ fieldset select {
     height: 70px;
     gap: 5px;
 }
+
 .formulario__trilhas__radioButtons__rbt input {
     width: 20px;
     height: 20px;
@@ -220,16 +226,19 @@ fieldset select {
     flex-direction: row;
     align-items: flex-start;
 }
+
 .formulario__termos input {
     width: 40px;
     height: 20px;
 }
+
 .formulario__termos label {
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     color: rgba(87, 83, 78, 1);
 }
+
 .formulario__termos a {
     text-decoration: none;
     font-weight: 500;
@@ -246,7 +255,7 @@ fieldset select {
     justify-content: flex-end;
 }
 
-.formulario__confirmacao button{
+.formulario__confirmacao button {
     min-width: 120px;
     border-radius: 8px;
     padding: 12px 24px;
@@ -256,16 +265,195 @@ fieldset select {
     font-size: 16px;
 }
 
-.formulario__confirmacao__cancelar{
+.formulario__confirmacao__cancelar {
     border: 1px solid rgba(228, 58, 18, 1);
     background-color: white;
     color: rgba(228, 58, 18, 1);
+    cursor: pointer;
 }
-.formulario__confirmacao__confirmar{
+
+.formulario__confirmacao__cancelar:hover {
+    background-color: rgba(228, 58, 18, 0.1);
+    transition: background-color 0.3s ease;
+    color: rgba(228, 58, 18, 1);
+
+}
+
+.formulario__confirmacao__salvar {
+    border: 1px solid rgba(33, 53, 166, 1);
+    background-color: rgba(33, 53, 166, 1);
+    color: white;
+    cursor: pointer;
+}
+
+.formulario__confirmacao__salvar:hover {
+    background-color: rgba(33, 53, 166, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+
+
+.formulario__confirmacao__confirmar {
     border: 1px solid rgba(228, 58, 18, 1);
     background-color: rgba(228, 58, 18, 1);
     color: white;
+    cursor: pointer;
 }
+
+.formulario__confirmacao__confirmar:hover {
+    background-color: rgba(228, 58, 18, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-fields label {
+    color: rgba(87, 83, 78, 1);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-fields input {
+    height: 40px;
+    padding: 3px 4px;
+    border-width: 1px;
+    border-color: rgba(214, 211, 209, 1);
+    border-radius: 8px;
+    border-style: solid;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+
+body.dark-mode fieldset label,
+body.dark-mode .cabecalho p,
+body.dark-mode .formulario__termos label,
+body.dark-mode .login-fields label {
+    color: #cccccc;
+}
+
+body.dark-mode fieldset input,
+body.dark-mode fieldset select,
+body.dark-mode .login-fields input {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode .formulario__trilhas__radioButtons__rbt {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-mode .custom-upload-area {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-mode .uploaded .custom-upload-area {
+    background-color: #3a2a1e;
+    border-color: rgba(246, 120, 65, 1);
+}
+
+/* Modo Escuro - Botão e Ícone */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: white;
+    
+}
+
+/* Modo Escuro - Estilos Gerais */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode main {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode fieldset label,
+body.dark-mode .cabecalho p,
+body.dark-mode .formulario__termos label,
+body.dark-mode .login-fields label {
+    color: #cccccc;
+}
+
+body.dark-mode fieldset input,
+body.dark-mode fieldset select,
+body.dark-mode .login-fields input {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border-color: #444;
+}
+
+body.dark-mode .formulario__trilhas__radioButtons__rbt {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-mode .custom-upload-area {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+body.dark-mode .uploaded .custom-upload-area {
+    background-color: #3a2a1e;
+    border-color: rgba(246, 120, 65, 1);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+/* Efeito de hover na ilustração */
+.aside__imagem-de-fundo:hover {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
@@ -276,16 +464,16 @@ fieldset select {
     main,
     aside {
         width: 100%;
-        position: relative; /* Volta ao fluxo normal */
+        position: relative;
     }
 
     aside {
-        height: 300px; /* Altura fixa para mobile */
+        height: 300px;
     }
 
     .aside__imagem-de-fundo {
         width: 50%;
-        position: relative; /* Ajusta posicionamento */
+        position: relative;
         top: auto;
         left: auto;
         transform: none;
@@ -298,9 +486,18 @@ fieldset select {
         transform: none;
         margin: 20px 0;
     }
+    
+    .formulario__confirmacao {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .formulario__confirmacao button {
+        width: 100%;
+    }
 }
 
-/* Responsividade para telas maiores do que 720p (que foi usado no design) */
+/* Responsividade para telas maiores do que 720p */
 @media (min-width: 1281px) {
     .global-container {
         transform: scale(1.2); 
@@ -311,5 +508,167 @@ fieldset select {
 
     main {
         padding: 60px 5%; 
+    }
+}
+
+
+/* Estilos para a página de login */
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login-form-section {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image-section {
+    flex: 1;
+    background: linear-gradient(135deg, #2135A6 0%, #1A2B8F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-illustration {
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.login-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-logo {
+    width: 180px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.login-welcome h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2135A6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-welcome p {
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input {
+    height: 50px;
+    padding: 0 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #2135A6;
+    box-shadow: 0 0 0 3px rgba(33, 53, 166, 0.1);
+    outline: none;
+}
+
+.login-button {
+    background: #E43A12;
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background: #D0340F;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(228, 58, 18, 0.3);
+}
+
+.register-link {
+    text-align: center;
+    color: #666;
+    margin-top: 30px;
+}
+
+.register-link a {
+    color: #E43A12;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #D0340F;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+    
+    .login-form-section {
+        padding: 40px 30px;
+        order: 2;
+    }
+    
+    .login-image-section {
+        order: 1;
+        padding: 30px;
+    }
+    
+    .login-illustration {
+        max-height: 200px;
     }
 }

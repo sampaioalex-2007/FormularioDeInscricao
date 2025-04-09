@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        
+        <button id="darkModeToggle" class="dark-mode-toggle">
+            <img src="public/img/sun.png" alt="Modo claro" id="darkModeIcon" class="dark-mode-icon">
+        </button>
+        
         <div class="global-container">
             <main class="inscricao">
                 <div>
@@ -25,37 +30,39 @@
                         Programa Trilhas.
                     </p>
                 </section>
-                <form action="" class="formulario"  onsubmit="return false;">
+                <form action="" class="formulario" onsubmit="return false;">
                     <fieldset class="informacoes">
                         <div>
                             <legend>Informações do participante</legend>
                         </div>
                         <div>
                             <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" required />
+                            <input type="text" id="nome" required autocomplete="name" />
                         </div>
                         <div>
                             <label for="dataNascimento">Data de nascimento</label>
-                            <input type="text" id="dataNascimento" required />
+                            <input type="text" id="dataNascimento" required autocomplete="bday" />
                         </div>
                         <div>
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" required />
+                            <input type="text" id="cpf" required autocomplete="off" />
                         </div>
                         <div>
                             <label for="sexo">Sexo</label>
                             <select id="sexo" required>
+                                <option value="" disabled selected>Selecione</option>
                                 <option value="Feminino">Feminino</option>
                                 <option value="Masculino">Masculino</option>
+                                <option value="Outro">Outro</option>
                             </select>
                         </div>
                         <div>
                             <label for="email">E-mail</label>
-                            <input type="text" id="email" required />
+                            <input type="text" id="email" required autocomplete="email" />
                         </div>
                         <div>
                             <label for="telefone">Telefone</label>
-                            <input type="text" id="telefone" required />
+                            <input type="text" id="telefone" required autocomplete="tel" />
                         </div>
                         <div class="custom-file-upload" id="uploadContainer">
                             <label for="docIdentidade">Documento de identidade</label>
@@ -79,12 +86,12 @@
                         </div>
                         <div>
                             <label for="cep">CEP</label>
-                            <input type="text" id="cep" required />
+                            <input type="text" id="cep" required autocomplete="postal-code" />
                         </div>
                         <div class="endereco__doisInputs">
                             <div class="endereco__doisInputs__primeiro">
                                 <label for="rua">Rua</label>
-                                <input type="text" id="rua" required />
+                                <input type="text" id="rua" required autocomplete="address-line1" />
                             </div>
                             <div class="endereco__doisInputs__segundo">
                                 <label for="numero">Número</label>
@@ -94,11 +101,11 @@
                         <div class="endereco__doisInputs">
                             <div class="endereco__doisInputs__primeiro">
                                 <label for="cidade">Cidade</label>
-                                <input type="text" id="cidade" required />
+                                <input type="text" id="cidade" required autocomplete="address-level2" value="cidade" />
                             </div>
                             <div class="endereco__doisInputs__segundo">
                                 <label for="estado">Estado</label>
-                                <input type="text" id="estado" required />
+                                <input type="text" id="estado" required autocomplete="address-level1" value="estado" />
                             </div>
                         </div>
                         <div class="custom-file-upload" id="uploadContainer">
@@ -110,13 +117,25 @@
                                     alt="Ícone de upload"
                                     class="upload-icon"
                                 />
-                                <span class="upload-text"
+                                <span class="upload-text"  
                                     >Clique aqui para selecionar o arquivo</span
                                 >
                                 <span class="file-name"></span>
                             </label>
                         </div>
                     </fieldset>
+                    
+                    <div class="login-fields">
+                        <label for="userId">ID do Usuário</label>
+                        <input type="text" id="userId" required autocomplete="username" />
+                        
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" required autocomplete="new-password" />
+                        
+                        <label for="confirmPassword">Confirmar Senha</label>
+                        <input type="password" id="confirmPassword" required autocomplete="new-password" />
+                    </div>
+                    
                     <section class="trilhas">
                         <h2>Trilhas de aprendizagem</h2>
                         <p>Selecione apenas uma trilha</p>
@@ -225,7 +244,8 @@
                     </div>
                     <div class="formulario__confirmacao">
                         <button class="formulario__confirmacao__cancelar">Cancelar</button>
-                        <button type="submit" class="formulario__confirmacao__confirmar" >Fazer inscrição</button>
+                        <button type="button" class="formulario__confirmacao__salvar">Salvar</button>
+                        <button type="submit" class="formulario__confirmacao__confirmar">Fazer inscrição</button>
                     </div>
                 </form>
             </main>
@@ -242,25 +262,6 @@
                     class="aside__logo"
                 />
             </aside>
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    // Garante que o DOM está carregado
-                    const fileInputs = document.querySelectorAll('.input-hidden');
-                    
-                    fileInputs.forEach(input => {
-                        input.addEventListener('change', (e) => {
-                            const container = e.target.closest('.custom-file-upload');
-                            
-                            if (container) {
-                                const fileNameSpan = container.querySelector('.file-name');
-                                if (fileNameSpan) {
-                                    fileNameSpan.textContent = e.target.files[0]?.name || '';
-                                    container.querySelector('.custom-upload-area').classList.toggle('uploaded', !!e.target.files.length);
-                                }
-                            }
-                        });
-                    });
-                });
-            </script>
+            <script src="script.js"></script>
     </body>
 </html>
