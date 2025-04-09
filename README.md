@@ -1,4 +1,5 @@
-README - Programa Trilhas Inova
+Programa Trilhas Inova
+
 1. O que é o projeto
 O Programa Trilhas Inova é uma aplicação web desenvolvida para gerenciar inscrições em cursos de tecnologia. O sistema permite que usuários se inscrevam em diferentes trilhas de aprendizagem (Front-end, Back-end, Jogos, UX e Ciência de Dados) fornecendo seus dados pessoais, documentos e criando uma conta de acesso.
 
