@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza o ícone do modo escuro/claro
     function updateDarkModeIcon() {
         const isDark = document.body.classList.contains('dark-mode');
-        darkModeIcon.src = isDark ? 'public/img/moon.png' : '/public/img/sun.png';
+        darkModeIcon.src = isDark ? 'public/img/moon.png' : 'public/img/sun.png';
         darkModeIcon.alt = isDark ? 'Modo escuro ativo' : 'Modo claro ativo';
     }
 });
